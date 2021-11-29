@@ -1,0 +1,160 @@
+Name,REF_DESC,AREA_MOUNTING
+RaceTrack-637102856811780360,ACB350.CAU010,ACB35
+RaceTrack-637102857037025367,ACB340.CAU010,ACB34
+RaceTrack_ACB390,ACB390.CAU010,ACB39
+RaceTrack_ACB380,ACB380.CAU010,ACB38
+FireDoor_RollerCurtain_B1400_H1500_RHS,ACB390.FDO030,ACB39
+FireDoor_RollerCurtain_B1400_H1500_RHS,ACB380.FDO020,ACB38
+FireDoor_RollerCurtain_B1400_H1500_RHS,ACB370.FDO020,ACB37
+FireDoor_RollerCurtain_B1400_H1500_RHS,ACB330.FDO030,ACB33
+FireDoor_RollerCurtain_B1400_H1500_RHS,ACB310.FDO020,ACB31
+FireDoor_RollerCurtain_B1400_H1500_LHS,ACB390.FDO020,ACB39
+FireDoor_RollerCurtain_B1400_H1500_LHS,ACB380.FDO030,ACB38
+FireDoor_RollerCurtain_B1400_H1500_LHS,ACB370.FDO030,ACB37
+BGH_CON_ATR_270_IP_Camera,ACB390.ATR040,ACB39
+BGH_CON_ATR_270_IP_Camera,ACB380.ATR040,ACB38
+BGH_CON_ATR_270_IP_Camera,ACB370.ATR040,ACB37
+BGH_CON_ATR_270_IP_Camera,ACB330.ATR040,ACB33
+BGH_CON_ATR_270_IP_Camera,ACB320.ATR040,ACB32
+BGH_CON_ATR_270_IP_Camera,ACB310.ATR040,ACB31
+FireDoor_RollerCurtain_B1400_H1500_LHS,ACB330.FDO020,ACB33
+FireDoor_RollerCurtain_B1400_H1500_LHS,ACB320.FDO030,ACB32
+FireDoor_RollerCurtain_B1400_H1500_LHS,ACB310.FDO030,ACB31
+FireDoor_RollerCurtain_B1400_H1500_RHS,ACB320.FDO020,ACB32
+FireDoor_RollerCurtain_B1400_H1500_RHS,ACB300.FDO030,ACB30
+FireDoor_RollerCurtain_B1400_H1500_LHS,ACB300.FDO020,ACB30
+RaceTrack_ACB360,ACB360.CAU010,ACB36
+FireDoor_RollerCurtain_B1400_H1500_RHS,ACB360.FDO030,ACB36
+RaceTrack_ACB370,ACB370.CAU010,ACB37
+BGH_CON_ATR_270_IP_Camera,ACB360.ATR040,ACB36
+BGH_CON_ATR_270_IP_Camera,ACB300.ATR040,ACB30
+FireDoor_RollerCurtain_B1400_H1500_RHS,ACB360.FDO020,ACB36
+RaceTrack_ACB330,ACB330.CAU010,ACB33
+Carousel_ARR_Motor Location, , 
+Carousel_ARR_Motor Location, , 
+Carousel_ARR_Motor Location, , 
+Carousel_ARR_Motor Location, , 
+Carousel_ARR_Motor Location, , 
+Carousel_ARR_Motor Location, , 
+Carousel_ARR_Motor Location, , 
+Carousel_ARR_Motor Location, , 
+Carousel_ARR_Motor Location, , 
+Carousel_ARR_Motor Location, , 
+Carousel_ARR_Motor Location, , 
+Carousel_ARR_Motor Location, , 
+Carousel_ARR_Motor Location, , 
+Carousel_ARR_Motor Location, , 
+Carousel_ARR_Motor Location, , 
+Carousel_ARR_Motor Location, , 
+RaceTrack_ACB320,ACB320.CAU010,ACB32
+RaceTrack_ACB310,ACB310.CAU010,ACB31
+RaceTrack_ACB30,ACB300.CAU010,ACB30
+RaceTrack_RTC010,RTC010.CAU010,RT01
+RaceTrack_RTC020,RTC020.CAU010,RT02
+RaceTrack_RTC030,RTC030.CAU010,RT03
+RaceTrack_RTC040,RTC040.CAU010,RT04
+RaceTrack_RTC050,RTC050.CAU010,RT05
+RaceTrack_RTC060,RTC060.CAU010,RT06
+RaceTrack_RTC070,RTC070.CAU010,RT07
+RaceTrack_RTC080,RTC080.CAU010,RT08
+RaceTrack_RTC090,RTC090.CAU010,RT09
+RaceTrack_RTC100,RTC100.CAU010,RT10
+RaceTrack_RTC110,RTC110.CAU010,RT11
+RaceTrack_RTC120,RTC120.CAU010,RT12
+Carousel_Maintenance_Space,N.A, 
+Carousel_Maintenance_Space,N.A, 
+Carousel_Maintenance_Space,N.A, 
+Carousel_Maintenance_Space,N.A, 
+Carousel_Maintenance_Space,N.A, 
+Carousel_Maintenance_Space,N.A, 
+Carousel_Maintenance_Space,N.A, 
+Carousel_Maintenance_Space,N.A, 
+Carousel_Maintenance_Space,N.A, 
+Carousel_Maintenance_Space,N.A, 
+Carousel_Maintenance_Space,N.A, 
+Carousel_Maintenance_Space,N.A, 
+Carousel_Maintenance_Space,N.A, 
+Carousel_Maintenance_Space,N.A, 
+Carousel_Maintenance_Space,N.A, 
+Carousel_Maintenance_Space,N.A, 
+Carousel_Maintenance_Space,N.A, 
+Carousel_Maintenance_Space,N.A, 
+Carousel_Maintenance_Space,N.A, 
+Carousel_Maintenance_Space,N.A, 
+Carousel_Maintenance_Space,N.A, 
+Carousel_Maintenance_Space,N.A, 
+Carousel_Maintenance_Space,N.A, 
+Carousel_Maintenance_Space,N.A, 
+Carousel_Maintenance_Space,N.A, 
+Carousel_Maintenance_Space,N.A, 
+Carousel_Maintenance_Space,N.A, 
+Carousel_Maintenance_Space,N.A, 
+Carousel_Maintenance_Space,N.A, 
+Carousel_Maintenance_Space,N.A, 
+Carousel_Maintenance_Space,N.A, 
+Carousel_Maintenance_Space,N.A, 
+Carousel_Maintenance_Space,N.A, 
+Carousel_Maintenance_Space,N.A, 
+Carousel_Maintenance_Space,N.A, 
+BGH_CON_DET_AttributesStartAddOn1,,
+BGH_CON_DET_AttributesEnd, , 
+BGH_CON_DET_AttributesStart, , 
+BGH_CON_DET_AttributesStartAddOn1,,
+BGH_CON_DET_AttributesEnd, , 
+BGH_CON_DET_AttributesStart, , 
+Carousel_Maintenance_Space,N.A, 
+Carousel_Maintenance_Space,N.A, 
+BGH_CON_DET_AttributesStartAddOn1,,
+BGH_CON_DET_AttributesEnd, , 
+BGH_CON_DET_AttributesStart, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+Bumper, , 
+RaceTrack_RTC130,RTC130.CAU010,RT13

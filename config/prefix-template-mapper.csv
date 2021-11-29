@@ -1,0 +1,14 @@
+prefix , template , supplier
+CON , L6-conveyor.xlsx , Beumer
+HSD , L6-diverter-hsd.xlsx , PGL
+CAU , L6-carousel.xlsx , PGL
+DVT , L6-diverter-single-arm.xlsx , Vanderlande
+DVS , L6-vsu-double-arm.xlsx, Vanderlande
+DIV , L6-merge-divert.xlsx , Motion06
+MER , L6-merge-divert.xlsx , Motion06
+VSU , L6-vsu.xlsx , Motion06
+VTU , L6-vtu.xlsx , Motion06
+CRV , L6-curve.xlsx , Motion06
+ATR , L6-atr.xlsx , Datalogic
+FDO , L6-fsd.xlsx , Ferco
+SDO , L6-swing-door.xlsx , Accessco
