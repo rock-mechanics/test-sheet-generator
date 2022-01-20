@@ -30,7 +30,23 @@ def main() :
             else : 
                 template_mapper[prefix] = template
 
-    # read csv file, and record colmun index
+    # read area_mounting mapper    
+    # area mounting -> level
+    # area mounting -> drawing grids
+    mounting_to_level = {}
+    mounting_to_grids = {}
+    with open("./config/area_mounting_mapper.csv") as f : 
+        r = csv.reader(f)
+        for row in r : 
+            mounting = row[0].strip()
+            level = row[1].strip()
+            grids = row[2].strip()
+            if mounting not in mounting_to_level : 
+                mounting_to_level[mounting] = level
+            if mounting not in mounting_to_grids : 
+                mounting_to_grids[mounting] = grids
+
+    # read csv data file, and record colmun index
     with open(sys.argv[1]) as f : 
         r = csv.DictReader(f)
         headers = r.fieldnames
@@ -38,35 +54,63 @@ def main() :
         if (not "REF_DESC" in headers) or (not "AREA_MOUNTING" in headers) : 
             print("Error : csv does not contains REF_DESC or AREA_MOUNTING.")
             exit()
-        # go through each line and fill in template accordingly
+        # go through each line and append to data pair list
         data_pairs = []
         for line in r : 
-            data_pairs.append((line["REF_DESC"], line["AREA_MOUNTING"]))
-        # split by area mounting
-        mounting_dict = split_area_mounting(data_pairs)
+            data_pairs.append((line["REF_DESC"].strip(), line["AREA_MOUNTING"].strip()))
 
+        # split by data pair list into different lists based on area mounting
+        mounting_to_ref_list = split_area_mounting(data_pairs)
+
+        # get area mounting needs to be generated from user
         # if all area_mountings needs to be generated
         if '-all' in sys.argv[2:] : 
-            mountings = list(mounting_dict.keys())
+            mountings = list(mounting_to_ref_list.keys())
         else : 
             mountings = sys.argv[2:]
 
-        # loop each area mounting
+        # loop each area mounting provided by user
         for m in mountings : 
-            if not m in mounting_dict : 
+            # if the data pair does not contain the area mounting, skip it
+            if not m in mounting_to_ref_list : 
                 print("Warning : area mounting {} is not included in data.".format(m))
-                continue;
-            print("generating area mounting : {}".format(m))
+                continue
+            # generate the area mounting
+            print("generating area : {}".format(m))
+            # prepare the output directory
             output_directory = os.path.join("output" , m)
             prepare_directory(output_directory)
-            # loop through all equipments
+            # loop through all equipment types
             for e in template_mapper : 
-                refs = get_refs_by_prefix(mounting_dict[m], e)
+                # get the data rows with the correct equipment
+                refs = get_refs_by_prefix(mounting_to_ref_list[m], e)
                 if not refs : 
                     continue
-                filename = os.path.join(output_directory, "L6-{}-{}.xlsx".format(m, e))
-                print("generating : {}".format(filename))
-                generate_output(refs, os.path.join("template", template_mapper[e]), filename, m)
+                # once we got all the data related with this type of equipment
+                # further divide the ref list based on area functions (sub system)
+                print("\tgenerating equipment type : {}".format(e))
+                subs = get_refs_by_subsystem(refs)
+                # generate one file for each sub system
+                for sub in subs : 
+                    filename = os.path.join(output_directory, "L6-{}-{}-{}.xlsx".format(m, e, sub))
+                    print("\t\tgenerating subsystem : {}".format(sub))
+                    generate_output(sorted(subs[sub]), os.path.join("template", template_mapper[e]), filename, m, mounting_to_level[m], mounting_to_grids[m], sub)
+
+# divide the list of refs based on its subsystem
+# receive a list of refs
+# returns a dictionary of subsystem -> refs
+def get_refs_by_subsystem(refs) : 
+    subs = {}
+    for e in refs : 
+        parts = e.split('.')
+        subsys = parts[0]
+        if (subsys in subs) : 
+            # the sub system is already in the dictionary
+            subs[subsys].append(e)
+        else : 
+            # create a new list of refs
+            subs[subsys] = [e]
+    return subs
 
 # it receives a list of pairs
 # returns a dictionry with area_mounting as key
@@ -75,7 +119,7 @@ def split_area_mounting(pairs) :
     for ref_desc, area_mounting in pairs : 
         # empty strings will be ignored
         if not ref_desc.strip() or not area_mounting.strip(): 
-            continue;
+            continue
         if area_mounting not in data_by_mounting : 
             data_by_mounting[area_mounting] = [ref_desc]
         else : 

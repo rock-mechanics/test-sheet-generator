@@ -1,12 +1,13 @@
 import sys
+import os
 import openpyxl
 import math
 from openpyxl import drawing
 
-def generate_output(data, template, output_file, mounting):
+def generate_output(data, template, output_file, mounting, level, drawing_grids, subsystem):
 
     # template setting
-    starting_row = 12
+    starting_row = 10
     ending_row = 26
     fix_col = 1
 
@@ -15,12 +16,27 @@ def generate_output(data, template, output_file, mounting):
     data_count = len(data)
     page_num = math.ceil(data_count/row_count)
 
+    if not os.path.isfile(template) : 
+        print("\t\t\tError : template {} doest not exist".format(template))
+        return
+
     wb = openpyxl.load_workbook(template)
     ws = wb.active
 
+    # set up the first page 
     ws.title="Page_1"
-    ws['V5']="{}/{}".format(1,page_num)
-    ws['C7']="Area : {}".format(mounting)
+    # page number
+    ws['X5']="{}/{}".format(1,page_num)
+    # area mounting
+    ws['B6']="Area : {}".format(mounting)
+    # system
+    ws['B7']="{}".format(subsystem[:3])
+    # drawing grids
+    ws['B8']="{}".format(drawing_grids)
+    # level
+    ws['P6']="{}".format(level)
+    # subsystem
+    ws['P7']="{}".format(subsystem)
     insert_image(ws)
 
     read_row = 0
